@@ -47,7 +47,7 @@ const Todo = () => {
     const deleteItems = (index) => {
         const updateData = item.filter((element) => {
             console.log("mmyy", element)
-            return element.id != index
+            return element.id !== index
         })
         setItem(updateData)
     }

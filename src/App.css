@@ -1,165 +1,228 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.main-div {
   min-height: 100vh;
+  background: #060822;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* align-items: center; */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-body {
-  margin: 0px;
-  padding: 0px;
-}
-
-.main_div {
-  width: 100%;
-  height: 100vh;
-  background-color: #6983aa;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.child-div {
   text-align: center;
+  margin-top: 12rem;
 }
 
-.center_div {
-  width: 25%;
-  height: 80vh;
-  background-color: #f4f4f4;
-  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+.child-div figure img {
+  width: 10rem;
+  height: 8rem;
 }
 
-h1 {
-  color: white;
-  background-color: #8566aa;
-  padding: 6px 0px 2px 0px;
-  margin-bottom: 10px;
-  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
-}
-
-input {
-  text-align: center;
-  height: 30px;
-  top: 10px;
-  border: none;
-  background: transparent;
-  font-size: 20px;
-  font-weight: 500;
-  width: 60%;
-  border-bottom: 2px solid #8566aa;
-  outline: none;
-}
-
-button {
-  min-width: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border-color: transparent;
-  background-color: #8566aa;
-  columns: #fff;
-  font-size: 40px;
-  border: none;
-  outline: none;
-  margin-left: 10px;
-  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
-}
-
-button:hover {
-  background-color: #20bf6b;
-}
-
-ol {
-  margin-top: 30px;
-}
-
-ol li {
-  padding-left: 0px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-  /* min-height: 400px; */
-  display: flex;
-  align-items: center;
-  color: #8566aa;
+.child-div figure figcaption {
+  color: #fff;
+  font-size: 2.2rem;
+  padding-top: 2rem;
   text-transform: capitalize;
 }
 
-.todo_style {
+input {
+  /* display: block; */
+  min-width: 40rem;
+  height: 3.4rem;
+  padding: 2rem 1.2rem;
+  font-size: 1.8rem;
+  line-height: 1.42857143;
+  margin-top: 2rem;
+  color: rgb(58, 57, 57);
+  background-color: #fff;
+  background-image: none;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  -webkit-box-shadow: inset 0 0.1rem 0.1rem rgb(0 0 0 / 8%);
+  box-shadow: inset 0 0.1rem 0.1rem rgb(0 0 0 / 8%);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+input,
+input:focus,
+input:active,
+input:active:focus {
+  border: none;
+  padding: 2.3rem 1.5rem;
+  outline: none;
+}
+input {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+input:focus {
+  -webkit-box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+/*  Please Subscribe to ThapaTechnical Youtube Channel
+/* Click Here: https://www.youtube.com/thapatechnical  */
+
+.todo-btn {
+  width: 5rem;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.fa {
+  margin-left: -2.5rem;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10;
+  background-color: #fff;
+  background-image: none;
+  color: #666;
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
+  font-size: 2rem;
+}
+.fa:hover {
+  color: rgb(47, 214, 122);
+}
+
+.fa-plus:before {
+  content: "\f067";
+  font-size: 1.5rem;
+}
+
+.showItems {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.eachItem {
+  background: #fff;
+  padding: 1.2rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.7rem;
+  margin-left: 1rem;
+  min-width: 40rem;
+  word-break: break-word;
+  background: rgb(85, 41, 220);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.todo_style .fa-times {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #8566aa;
-  border-radius: 50%;
-  margin: 0px 15px 0px 35px;
-  color: aliceblue;
-  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+.eachItem:hover {
+  background: rgb(249, 249, 252);
+  color: rgb(85, 41, 220);
 }
 
-.todo_style .fa-times:hover {
-  background-color: crimson;
+.showItems .eachItem h3 {
+  padding-left: 1rem;
+  font-size: 1.6rem;
+  color: #fff;
 }
 
-.todo_style .fa-times:hover .list_style {
-  color: crimson;
+.fa-trash-alt,
+.fa-edit {
+  /* margin-left: -2.5rem; */
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10;
+  color: rgb(251, 251, 251);
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
+  font-size: 2rem;
 }
 
-@media (max-width: "768px") {
-  .center_div {
-    width: 55%;
-  }
+.addItems .fa-edit {
+  color: rgb(47, 214, 122);
+}
 
-  .todo_style .fa-times {
-    margin: 0px 15px 0px 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.fa-edit {
+  margin-left: -3.5rem;
+}
 
-  button {
-    margin-left: 5px;
-    min-height: 40px;
-    width: 40px;
-    color: #fff;
-    font-size: 30px;
-  }
+/*  Please Subscribe to ThapaTechnical Youtube Channel
+/* Click Here: https://www.youtube.com/thapatechnical  */
+
+.eachItem:hover .fa-trash-alt {
+  color: rgb(214, 47, 61);
+}
+
+.eachItem:hover .fa-edit {
+  color: rgb(100, 214, 47);
+}
+
+.eachItem:hover h3 {
+  color: rgb(85, 41, 220);
+}
+
+.btn {
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+.btn:hover {
+  text-decoration: none;
+}
+
+.effect04 {
+  --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+  display: var(--uismLinkDisplay);
+  color: #000;
+  outline: solid 2px #000;
+  position: relative;
+  transition-duration: 0.4s;
+  overflow: hidden;
+}
+
+.effect04::before,
+.effect04 span {
+  margin: 0 auto;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  transition-duration: 0.4s;
+}
+
+.effect04:hover {
+  background-color: rgb(85, 41, 220);
+}
+
+.effect04:hover span {
+  -webkit-transform: translateY(-400%) scale(-0.1, 20);
+  transform: translateY(-400%) scale(-0.1, 20);
+}
+
+.effect04::before {
+  content: attr(data-sm-link-text);
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translateY(500%) scale(-0.1, 20);
+  transform: translateY(500%) scale(-0.1, 20);
+}
+
+.effect04:hover::before {
+  letter-spacing: 0.05em;
+  -webkit-transform: translateY(0) scale(1, 1);
+  transform: translateY(0) scale(1, 1);
 }
